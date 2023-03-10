@@ -1,13 +1,14 @@
-const person =
-  // : {
-  //   name: string;
-  //   age: number;
-  // }
-  {
-    name: "Michael",
-    age: 28,
-    hobby: ["Psychology", "Cooking"],
-  };
+const person: {
+  name: string;
+  age: number;
+  hobby: string[];
+  role: [number, string]; // tuple type
+} = {
+  name: "Michael",
+  age: 28,
+  hobby: ["Psychology", "Cooking"],
+  role: [2, "singer"],
+};
 // console.log(person.name);
 
 const favoriteActivities = ["Sports"];
