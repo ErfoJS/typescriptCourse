@@ -3,7 +3,7 @@ function add(n1, n2, showResult, phrase) {
     //     throw new Error("Incorrect input");
     //   }
     if (showResult) {
-        console.log(phrase + n1 + n2);
+        console.log("".concat(phrase, " ").concat(n1 + n2));
     }
     else {
         return n1 + n2;
