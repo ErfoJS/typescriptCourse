@@ -9,11 +9,16 @@
 //   hobby: ["Psychology", "Cooking"],
 //   role: [2, "singer"],
 // };
+
+const ADMIN = 0; // <--,
+const READ_ONLY = 1; // <--| manual Enum (bad but works)
+const AUTHOR = 2; // <--'
+
 const person = {
   name: "Michael",
   age: 28,
   hobby: ["Psychology", "Cooking"],
-  role: "Read Only User",
+  role: ADMIN,
 };
 // console.log(person.name);
 
@@ -23,8 +28,8 @@ for (const hobby of person.hobby) {
   console.log(hobby.toLocaleUpperCase());
   // console.log(hobby.map()) typescript knows what kind of methods are allowed.
 }
-if (person.role === "READ_ONLY_USER") {
+if (person.role === ADMIN) {
   // never works, diffrences in typing method. Enum intro.
-  console.log("anything");
+  console.log("It is admin");
 }
-console.log(person.role);
+//console.log(person.role);
